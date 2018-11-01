@@ -1,0 +1,14 @@
+#include <omp.h>
+#include <unistd.h>
+#include <stdio.h>
+
+int main(int argc, char const *argv[])
+{
+    int rank;
+    #pragma omp parallel num_threads(4)
+    {
+     rank = omp_get_thread_num();
+     printf("I am %d thread.\n", rank);
+    }
+    return 0;
+}
