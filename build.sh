@@ -1,2 +1,2 @@
-icpc -openmp $1
-g++ -fopenmp $1
+icpc -openmp $1 -o $1.out
+# g++ -fopenmp $1
